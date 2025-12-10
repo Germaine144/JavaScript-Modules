@@ -1,19 +1,19 @@
 
-function square(n) {
+export function square(n) {
     if (typeof n !== "number" || isNaN(n)) {
         return "Invalid input";
     }
     return n * n;
 }
 
-function cube(n) {
+export function cube(n) {
     if (typeof n !== "number" || isNaN(n)) {
         return "Invalid input";
     }
     return n * n * n;
 }
 
-function sqrt(n) {
+export function sqrt(n) {
     if (typeof n !== "number" || isNaN(n)) {
         return "Invalid input";
     }

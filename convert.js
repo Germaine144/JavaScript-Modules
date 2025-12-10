@@ -1,13 +1,15 @@
+// convert.js
 
-function convertCelsius(celsius) {
-   
+export function convertCelsius(celsius) {
+    // Validate input
     if (typeof celsius !== "number" || isNaN(celsius)) {
         return "Invalid temperature input";
     }
 
-   
-    const fahrenheit = (celsius * 9/5) + 32;
+    // Convert to Fahrenheit
+    const fahrenheit = (celsius * 9 / 5) + 32;
 
+    // Determine status
     let status = "";
     if (celsius > 30) {
         status = "Hot";
@@ -17,8 +19,6 @@ function convertCelsius(celsius) {
         status = "Cold";
     }
 
-   
+    // Return string using template literal
     return `${celsius}°C = ${fahrenheit}°F (${status})`;
 }
-
-module.exports = convertCelsius;
